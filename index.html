@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flappy Bird AI Battle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Flappy Bird AI Battle</h1>
+
+    <div class="games-row">
+      <!-- Top Game - jev -->
+      <div class="game-wrapper">
+        <div class="game-header">
+          <span class="ai-name jev-name">🤖 jev</span>
+          <span class="score" id="score-jev">0</span>
+          <span class="status" id="status-jev">Playing</span>
+        </div>
+        <canvas id="canvas-jev" width="300" height="450"></canvas>
+      </div>
+
+      <!-- Bottom Game - laya -->
+      <div class="game-wrapper">
+        <div class="game-header">
+          <span class="ai-name laya-name">🧠 laya</span>
+          <span class="score" id="score-laya">0</span>
+          <span class="status" id="status-laya">Playing</span>
+        </div>
+        <canvas id="canvas-laya" width="300" height="450"></canvas>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="btn-restart">Restart</button>
+      <button id="btn-pause">Pause</button>
+      <label class="heuristic-toggle">
+        <input type="checkbox" id="chk-heuristic">
+        Local heuristic (no AI)
+      </label>
+    </div>
+
+    <div class="info-bar">
+      <span>Space: restart | P: pause</span>
+      <span id="latency-jev"></span>
+      <span id="latency-laya"></span>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+  <script src="ai.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
